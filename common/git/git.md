@@ -40,10 +40,9 @@ git rm --cached {{file to remove}}
 git rm --cached -r {{folder to remove}}
 ```
 
-- Remove file and commit history in git repository
+- Remove commit history in git repository
 
 ```bash
-git rm --cached {{file to remove}}
 git commit --amend -CHEAD
 git push
 ```
