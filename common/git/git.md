@@ -26,7 +26,7 @@ git config --global core.autocrlf input
 
 ## Use
 
-### Remove file or directory from history
+### Remove file or directory from git repository
 
 - Remove file from git repository
 
