@@ -18,8 +18,9 @@ sudo apt-get install libapache2-mod-php7.2
 
 ### Enable a site
 
+> Edit /etc/sites-available/example.com.conf
+
 ```apache
-# Edit /etc/sites-available/example.com.conf
 <VirtualHost *:80>
   ServerName example.com
   DocumentRoot /var/www/example.com
