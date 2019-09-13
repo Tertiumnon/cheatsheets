@@ -1,7 +1,5 @@
 # Semantic MediaWiki
 
-## Install
-
 ## Use
 
 ### Semantic MediaWiki PHP examples
