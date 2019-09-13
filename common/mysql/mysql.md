@@ -30,7 +30,7 @@ sudo service mysql start
 
 ### Setup as a service
 
-```cmd
+```powershell
 # Install
 mysqld --install
 
