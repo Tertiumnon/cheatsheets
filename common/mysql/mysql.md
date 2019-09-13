@@ -12,17 +12,26 @@ sudo apt-get install mysql-server
 
 ### Change data path
 
+- Stop MySQL service
+
 ```bash
-# Stop MySQL service
 sudo service mysql stop
+```
+- Copy MySQL data
 
-# Copy MySQL data
+```bash
 sudo cp -Rp /var/lib/mysql /mnt/d/var/lib/mysql
+```
 
-# Copy MySQL logs
+- Copy MySQL logs
+
+```bash
 sudo cp -Rp /var/log/mysql /mnt/d/var/log/mysql
+```
 
-# Start MySQL service
+- Start MySQL service
+
+```bash
 sudo service mysql start
 ```
 
@@ -30,14 +39,21 @@ sudo service mysql start
 
 ### Setup as a service (Windows)
 
+- Install
+
 ```powershell
-# Install
 mysqld --install
+```
 
-# Initialize
+- Initialize
+
+```powershell
 mysqld --initialize
+```
 
-# Run
+- Run
+
+```powershell
 mysqld --console
 ```
 
