@@ -28,7 +28,7 @@ sudo service mysql start
 
 ## Use
 
-### Setup as a service
+### Setup as a service (Windows)
 
 ```powershell
 # Install
