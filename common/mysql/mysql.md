@@ -30,21 +30,14 @@ sudo service mysql start
 
 ### Setup as a service
 
-Install:
-
 ```cmd
+# Install
 mysqld --install
-```
 
-Initialize:
-
-```cmd
+# Initialize:
 mysqld --initialize
-```
 
-Run:
-
-```cmd
+# Run:
 mysqld --console
 ```
 
