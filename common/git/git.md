@@ -2,12 +2,22 @@
 
 ## Install
 
-### Setup user config
+### Setup user email
 
 ```bash
 git config --global user.email "you@example.com"
+```
+
+### Setup user name
+
+```bash
 git config --global user.name "Your Name"
-git config --global core.autocrlf input # all line endings to LF
+```
+
+### Setup all line endings to LF
+
+```bash
+git config --global core.autocrlf input
 ```
 
 ## Use
