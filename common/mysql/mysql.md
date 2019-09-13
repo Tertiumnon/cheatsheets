@@ -8,7 +8,7 @@
 sudo apt-get install mysql-server
 ```
 
-## Configuring
+## Configure
 
 ### Change data path
 
