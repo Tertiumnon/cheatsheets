@@ -44,6 +44,11 @@ git rm --cached -r {{folder to remove}}
 
 ```bash
 git commit --amend -CHEAD
+```
+
+- Push your commits
+
+```bash
 git push
 ```
 
