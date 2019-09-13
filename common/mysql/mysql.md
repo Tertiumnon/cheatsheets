@@ -34,10 +34,10 @@ sudo service mysql start
 # Install
 mysqld --install
 
-# Initialize:
+# Initialize
 mysqld --initialize
 
-# Run:
+# Run
 mysqld --console
 ```
 
