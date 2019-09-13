@@ -4,10 +4,7 @@
 
 ### Disable Bash sounds
 
-Run:
-
 ```bash
+# Run and restart terminal
 echo "set bell-style none" >> ~/.inputrc
 ```
-
-Then restart Bash.
