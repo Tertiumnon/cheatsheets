@@ -26,6 +26,12 @@ git config --global core.autocrlf input
 
 ## Use
 
+### Get remote url
+
+```bash
+git config --get remote.origin.url
+```
+
 ### Remove file or directory from git repository
 
 - Remove file from git repository
