@@ -58,6 +58,34 @@ git commit --amend -CHEAD
 git push
 ```
 
+### Clean git repository
+
+- Remove the history
+
+```bash
+rm -rf .git
+```
+
+- Init new git repository
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+- Add remote origin
+
+```bash
+git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
+```
+
+- Push
+
+```bash
+git push -u --force origin master
+```
+
 ## Troubleshooting
 
 ### Encoding
