@@ -40,7 +40,7 @@ plugins=(
 )
 ```
 
-Run:
+- Run
 
 ```bash
 vsc
