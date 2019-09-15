@@ -18,7 +18,7 @@ sudo chsh -s /bin/zsh {{username}}
 
 ### Enable SSH agent in ZSH
 
-Edit .zshrc:
+- Edit .zshrc
 
 ```text
 plugins=(... ssh-agent)
@@ -32,7 +32,7 @@ zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github
 
 ### Enable ZSH plugin for Visual Studio Code
 
-Edit ~/.zshrc:
+- Edit ~/.zshrc
 
 ```bash
 plugins=(
@@ -58,7 +58,7 @@ git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-
 
 ## ZSH and UTF-8
 
-Edit ~/.zshrc:
+- Edit ~/.zshrc
 
 ```bash
 export LC_ALL=en_US.UTF-8
