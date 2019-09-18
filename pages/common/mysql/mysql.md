@@ -10,6 +10,20 @@ sudo apt-get install mysql-server
 
 ## Configure
 
+### MySQL service on bootup (Linux)
+
+- Enable starting MySQL service on bootup (Linux)
+
+```bash
+sudo update-rc.d mysql defaults
+```
+
+- Disable starting MySQL service on bootup (Linux)
+
+```bash
+sudo update-rc.d mysql remove
+```
+
 ### Change data path
 
 - Stop MySQL service
