@@ -1,5 +1,13 @@
 # UNIX
 
+## Users
+
+### Get users list
+
+```bash
+less /etc/passwd
+```
+
 ## Sudo
 
 ### Run sudo-command without entering a password
