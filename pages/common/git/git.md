@@ -32,6 +32,14 @@ git config --global core.autocrlf input
 git config --get remote.origin.url
 ```
 
+### Get changed files
+
+- Get changed in last commit files
+
+```bash
+git diff --name-only HEAD HEAD~1
+```
+
 ### Remove file or directory from git repository
 
 - Remove file from git repository
