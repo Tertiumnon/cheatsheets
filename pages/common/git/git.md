@@ -66,6 +66,14 @@ git commit --amend -CHEAD
 git push
 ```
 
+### Clear all stash
+
+- Clear all stash
+
+```bash
+git stash clear
+```
+
 ### Clean git repository
 
 - Remove the history
