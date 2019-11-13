@@ -21,3 +21,25 @@ print([ n for n in my_list if n == 1 ][0]) # 1
 for item in items:
     print('.', sep='', end='', flush=True)
 ```
+
+### Create requirements.txt
+
+- Install pip and use freeze command
+
+```bash
+pip freeze > requirements.txt
+```
+
+### Create requirements.txt from directory
+
+- Install pipreqs
+
+```bash
+pip install pipreqs
+```
+
+- Create requirements.txt from directory
+
+```bash
+pipreqs /home/project/location
+```
