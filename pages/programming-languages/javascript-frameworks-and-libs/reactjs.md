@@ -14,3 +14,30 @@
   "eject": "react-scripts eject"
 },
 ```
+
+### Use enviroment variables
+
+- Create file "./env" in the root. 
+
+```text
+.env
+package.json
+```
+
+- Place your variable with REACT_APP_ prefix.
+
+```text
+REACT_APP_PASSWORD=123
+```
+
+- Start your development enviroment.
+
+```text
+npm start
+```
+
+- Paste your variable into your code.
+
+```js
+console.log(process.env.REACT_APP_PASSWORD)
+```
