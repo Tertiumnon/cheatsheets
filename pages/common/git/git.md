@@ -102,6 +102,32 @@ git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
 git push -u --force origin master
 ```
 
+### Rename branch
+
+- Rename active branch
+
+```bash
+git branch -m {{new branch name}}
+```
+
+- Rename another branch
+
+```bash
+git branch -m {{old branch name}} {{new branch name}}
+```
+
+- Delete old branch and push branch with new name
+
+```bash
+git push origin: {{old branch name}} {{new branch name}}
+```
+
+- Reset the upstream
+
+```bash
+git push origin -u {{new branch name}}
+```
+
 ## Troubleshooting
 
 ### Encoding
