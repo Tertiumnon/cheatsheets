@@ -257,15 +257,13 @@ FLUSH PRIVILEGES;
 ### Uninstall (Ubuntu)
 
 ```bash
-sudo apt remove mysql-server
-sudo mv /var/lib/mysql /var/lib/mysql_old_backup
-sudo apt install mysql-server
+sudo apt-get remove --purge mysql-\*
+sudo apt-get install mysql-server mysql-client
 ```
 
 ### Uninstall (CenOS)
 
 ```bash
 sudo yum remove mysql-server
-sudo mv /var/lib/mysql /var/lib/mysql_old_backup
-sudo yum install mysql-server
+sudo yum install mysql-server mysql-client
 ```
