@@ -4,11 +4,19 @@
 
 ### Install ZSH (for current user)
 
+- Install ZSH (Ubuntu).
+
+```bash
+sudo apt install zsh
+```
+
+- Install Oh My ZSH.
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-### Set ZSH as default shell (CentOS)
+- Set ZSH as default shell (CentOS).
 
 ```bash
 sudo chsh -s /bin/zsh {{username}}
