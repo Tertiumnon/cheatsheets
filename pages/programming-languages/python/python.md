@@ -22,6 +22,15 @@ for item in items:
     print('.', sep='', end='', flush=True)
 ```
 
+### Save JSON to file
+
+- Save JSON to file
+
+```python
+with open('file_name.json', 'w+', encoding='utf-8') as outfile:
+    outfile.write(json.dumps(json_data, indent=4, ensure_ascii=False))
+```
+
 ### Create requirements.txt
 
 - Install pip and use freeze command
