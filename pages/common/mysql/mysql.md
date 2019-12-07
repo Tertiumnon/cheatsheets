@@ -100,21 +100,19 @@ mysqld --console
 | json data        | JSON          | or LONGTEXT
 ```
 
-### DATABASE
-
-#### CREATE DATABASE
+### Create database
 
 ```sql
 CREATE DATABASE database_name CHARACTER SET UTF8mb4 COLLATE utf8mb4_bin;
 ```
 
-#### IMPORT DATABASE
-
-##### Extract and import "db_name"
+### Extract 
 
 ```sql
 sed -n '/^-- Current Database: `db_name`/,/^-- Current Database: `/p' alldatabases.sql > db_name.sql
 ```
+
+### Import database
 
 ```sql
 mysql -D db_name -o db_name < all_databases.sql
@@ -124,10 +122,16 @@ mysql -D db_name -o db_name < all_databases.sql
 mysql -u db_user -p --one-database db_name < all_databases.sql
 ```
 
-##### Import database from archive
+### Import database from archive
 
 ```sql
-gunzip < database.sql.gz | mysql -u user_name -p database_name
+gunzip < {{db_import_name}}.sql.gz | mysql -u {{db_user}} -p {{db_name}}.sql
+```
+
+### Export database
+
+```sql
+mysqldump -u {{db_user}} -p {{db_name}} > {{db_export_name}}.sql
 ```
 
 ### CREATE USER
