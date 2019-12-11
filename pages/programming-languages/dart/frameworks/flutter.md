@@ -41,7 +41,7 @@ Written primarily in C++, provides low-level rendering support using Google's Sk
 
 ### Hot reload
 
-![Flutter hot reload](images/Flutter-hot-reload.gif)
+![Flutter hot reload](flutter/images/Flutter-hot-reload.gif)
 
 ### Video
 
@@ -55,7 +55,7 @@ Written primarily in C++, provides low-level rendering support using Google's Sk
 
 ## Flutter's trends
 
-![](images/Flutter-Release-Preview-1-GitHub-Star-Tracker-Growth-by-Date.png)
+![](flutter/images/Flutter-Release-Preview-1-GitHub-Star-Tracker-Growth-by-Date.png)
 
 ## References
 
