@@ -16,7 +16,7 @@ Paste to the end of file:
 {{username}} ALL=(ALL) NOPASSWD: ALL
 ```
 
-### Get users list
+### Get user list
 
 ```bash
 less /etc/passwd
