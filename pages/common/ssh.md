@@ -41,7 +41,7 @@ scp {{username}}@{{servername}}:/home/{{username}}/.ssh/{{keyname}} ~/.ssh/{{key
 - Add your private key to SSH config.
 
 ```text
-Host {{servername}}
+Host {{servername alias}}
     HostName {{servername}}
     User {{username}}
     IdentityFile ~/.ssh/{{keyname}}
