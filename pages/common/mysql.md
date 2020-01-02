@@ -134,11 +134,20 @@ gunzip < {{db_import_name}}.sql.gz | mysql -u {{db_user}} -p {{db_name}}.sql
 mysqldump -u {{db_user}} -p {{db_name}} > {{db_export_name}}.sql
 ```
 
-### CREATE USER
+### Create user
+
+- Create a database user.
 
 ```sql
-CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON database_name.* TO 'user_name'@'localhost';
+CREATE USER '{{user_name}}'@'localhost' IDENTIFIED BY '{{user_password}}';
+GRANT ALL PRIVILEGES ON {{database_name}}.* TO '{{user_name}}'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+- Set previous authentication method for MySQL 8.
+
+```sql
+ALTER USER '{{user_name}}'@'localhost' IDENTIFIED WITH mysql_native_password '{{user_password}}';
 FLUSH PRIVILEGES;
 ```
 
@@ -249,12 +258,15 @@ mysql> SET GLOBAL innodb_fast_shutdown = 1;
 sudo mysql_upgrade -u root -p
 ```
 
-### Client does not support authentication protocol
+### MySQL 8.0 - Client does not support authentication protocol requested by server; consider upgrading MySQL client
 
 ```mysql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{{password}}';
+ALTER USER '{{user_name}}'@'localhost' IDENTIFIED WITH mysql_native_password BY '{{user_password}}';
 FLUSH PRIVILEGES;
 ```
+
+* [stackoverflow.com/questions/50093144](https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server)
+* [](https://dev.mysql.com/doc/dev/connector-nodejs/8.0/)
 
 ## Uninstall
 
