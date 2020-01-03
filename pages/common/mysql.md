@@ -151,30 +151,34 @@ ALTER USER '{{user_name}}'@'localhost' IDENTIFIED WITH mysql_native_password '{{
 FLUSH PRIVILEGES;
 ```
 
-### COLUMNS
-
-#### ADD COLUMN primary key
+### ADD COLUMN with primary key
 
 ```sql
 ALTER TABLE table_name ADD id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
 ```
 
-#### ADD COLUMN first
+### ADD COLUMN as the first column
 
 ```sql
 ALTER TABLE table_name ADD id INT NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST;
 ```
 
-#### ADD COLUMN after
+### ADD COLUMN after an existing column
 
 ```sql
-ALTER TABLE table_name ADD col_name_n VARCHAR AFTER col_name_1;
+ALTER TABLE {{table_name}} ADD {{col_name_n}} VARCHAR AFTER {{column_name_1}};
 ```
 
-#### RENAME COLUMN
+### RENAME COLUMN
 
 ```sql
-ALTER TABLE table_name CHANGE COLUMN prev_col_name new_col_name [column_definition];
+ALTER TABLE {{table_name}} CHANGE COLUMN {{prev_column_name}} {{new_column_name}} {{column_definition}};
+```
+
+### CHANGE COLUMN TYPE
+
+```sql
+ALTER TABLE {{table_name}} MODIFY COLUMN {{column_name}} {{column_definition}};
 ```
 
 ### ADD categories
