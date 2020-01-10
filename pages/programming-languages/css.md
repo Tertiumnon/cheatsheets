@@ -6,6 +6,6 @@
 
 ```css
 .class {
-    margin-bottom: calc(var(--margin-md) * -1);
+    margin-top: calc(var(--some-var) * -1);
 }
 ```
