@@ -14,4 +14,4 @@
 
 ### Pure CSS tabs
 
-* [](https://codepen.io/renatorib/pen/rlpfj)
+* [PureCSS Tabs (Renato Ribeiro )](https://codepen.io/renatorib/pen/rlpfj)
