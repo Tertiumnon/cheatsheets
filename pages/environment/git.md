@@ -66,6 +66,20 @@ git commit --amend -CHEAD
 git push
 ```
 
+### Remove multiple branches using pattern
+
+- Test your pattern.
+
+```bash
+git branch | grep "{{pattern}}"
+```
+
+- Test your pattern.
+
+```bash
+git branch | grep "{{pattern}}" | xargs git branch -D
+```
+
 ### Clear all stash
 
 - Clear all stash
