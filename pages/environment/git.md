@@ -142,6 +142,22 @@ git push origin: {{old branch name}} {{new branch name}}
 git push origin -u {{new branch name}}
 ```
 
+### Rename tag
+
+- Rename tag locally.
+
+```bash
+git tag {{new tag name}} {{previous tag name}}
+git tag -d {{previous tag name}}
+```
+
+- Rename tag remotely.
+
+```bash
+git push origin :refs/tags/{{previous tag name}}
+git push origin --tags
+```
+
 ## Troubleshooting
 
 ### Encoding
@@ -150,4 +166,17 @@ git push origin -u {{new branch name}}
 
 ```bash
 git config --global core.quotePath false
+```
+
+### Error: Remote ref does not exist
+
+```bash
+error: unable to delete '{{branch name}}': remote ref does not exist
+error: failed to push some refs to 'https://github.com/{{repository name}}.git'
+```
+
+- Fix your local Git cache.
+
+```
+git fetch -p origin
 ```
