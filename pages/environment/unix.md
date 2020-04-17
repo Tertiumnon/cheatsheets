@@ -52,6 +52,20 @@ sudo lsof -i TCP:{{port}}
 
 ## Files and directories
 
+### View the file or firectory size
+
+```bash
+du -sh {{path}}
+```
+
+### Find the largest files
+
+- Find the largest files on a file system.
+
+```bash
+du -a / | sort -n -r | head -n 10
+```
+
 ### Remove files by pattern
 
 - Find and remove files in current directory by extension.
