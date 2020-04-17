@@ -49,3 +49,16 @@ netstat -lp | grep {{port}}
 ```bash
 sudo lsof -i TCP:{{port}}
 ```
+
+## Files and directories
+
+### Remove files by pattern
+
+- Find and remove files in current directory by extension.
+
+```bash
+find . -maxdepth 1 -name "*.{{extension}}" -delete
+```
+
+
+
