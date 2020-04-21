@@ -7,7 +7,7 @@
 - Create key storage file.
 
 ```bash
-touch authorized_keys
+touch ~/.ssh/authorized_keys
 ```
 
 - Setup permissions.
