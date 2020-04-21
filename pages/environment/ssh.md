@@ -4,6 +4,12 @@
 
 ### Create key storage file (server)
 
+- Create ssh folder (if not exists)
+
+```bash
+mkdir ~/.ssh
+```
+
 - Create key storage file.
 
 ```bash
