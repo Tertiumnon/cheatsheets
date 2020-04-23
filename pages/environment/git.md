@@ -32,6 +32,14 @@ git config --global core.autocrlf input
 git config --get remote.origin.url
 ```
 
+### Get existing branches
+
+- Existing branches are listed; the current branch will be highlighted in green and marked with an asterisk.
+
+```bash
+git branch --list
+```
+
 ### Get changed files
 
 - Get changed in last commit files
@@ -180,3 +188,8 @@ error: failed to push some refs to 'https://github.com/{{repository name}}.git'
 ```
 git fetch -p origin
 ```
+
+## References
+
+* [Git. Documentation. References](https://git-scm.com/docs)
+
