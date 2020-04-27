@@ -7,13 +7,13 @@
 - Setup user email
 
 ```bash
-git config --global user.email "you@example.com"
+git config --global user.email "{{email}}"
 ```
 
 - Setup user name
 
 ```bash
-git config --global user.name "Your Name"
+git config --global user.name "{{name}}"
 ```
 
 ### Configure line endings
@@ -26,10 +26,22 @@ git config --global core.autocrlf input
 
 ## Use
 
-### Get remote url
+### Get remote URL's
 
 ```bash
-git config --get remote.origin.url
+git remote -v
+```
+
+### Remove current remote origin
+
+```bash
+git remote rm origin
+```
+
+### Set remote URL via SSH
+
+```bash
+git remote set-url --add git@{{host}}:{{path}}.git
 ```
 
 ### Get existing branches
