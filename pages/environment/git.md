@@ -38,10 +38,16 @@ git remote -v
 git remote rm origin
 ```
 
-### Set remote URL via SSH
+### Add remote origin via SSH
 
 ```bash
 git remote add origin git@{{host}}:{{path}}.git
+```
+
+### Switching remote URLs from HTTPS to SSH
+
+```bash
+git remote set-url origin git@{{host}}:{{path}}.git
 ```
 
 ### Get existing branches
