@@ -41,7 +41,7 @@ git remote rm origin
 ### Set remote URL via SSH
 
 ```bash
-git remote set-url --add git@{{host}}:{{path}}.git
+git remote add origin git@{{host}}:{{path}}.git
 ```
 
 ### Get existing branches
