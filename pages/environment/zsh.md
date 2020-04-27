@@ -58,8 +58,16 @@ vsc
 
 ### Enable ZSH plugin for NVM
 
+Download plugin.
+
 ```bash
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+```
+
+Add next lines to your ZSH config file.
+
+```text
+plugins+=(zsh-nvm)
 ```
 
 [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
