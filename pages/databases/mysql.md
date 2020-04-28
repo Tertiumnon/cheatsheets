@@ -2,7 +2,7 @@
 
 ## Install
 
-### Install (Ubuntu)
+### Install MySQL 5 (Ubuntu)
 
 ```bash
 sudo apt-get install mysql-server
@@ -31,6 +31,7 @@ sudo update-rc.d mysql remove
 ```bash
 sudo service mysql stop
 ```
+
 - Copy MySQL data
 
 ```bash
