@@ -1,10 +1,24 @@
 # Windows Terminal
 
-## Windows Terminal Schemes
+## Profiles
 
-### Windows Terminal Dracula Scheme
+### Git Bash
 
-```text
+```json
+{
+    "guid": "{00000000-0000-0000-ba54-000000000002}",
+    "commandline" : "\"%PROGRAMFILES%\\git\\usr\\bin\\bash.exe\" -i -l",
+    "name" : "Git Bash",
+    "snapOnInput" : true,
+    "startingDirectory" : "%USERPROFILE%",
+}
+```
+
+## Schemes
+
+### Dracula
+
+```json
 {
   "background":  "#282A36",
   "black":  "#21222C",
