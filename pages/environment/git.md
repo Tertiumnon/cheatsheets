@@ -142,6 +142,12 @@ git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
 git push -u --force origin master
 ```
 
+### Pull another branch without switching
+
+```bash
+git fetch origin {{branch_name}}:{{branch_name}}
+```
+
 ### Rename branch
 
 - Rename active branch
