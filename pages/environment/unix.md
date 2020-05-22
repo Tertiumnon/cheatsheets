@@ -1,26 +1,36 @@
 # UNIX
 
-## Administration
+### Upgrade
 
-### Get user list
+#### Upgrade to the next version (Ubuntu) 
+
+```bash
+sudo do-release-upgrade -d
+```
+
+## Use
+
+### Users
+
+#### Get user list
 
 ```bash
 less /etc/passwd
 ```
 
-### Add new user
+#### Add new user
 
 ```bash
 useradd -m -d /home/{{user_name}} {{user_name}}
 ```
 
-### Remove user
+#### Remove user
 
 ```bash
 userdel {{user_name}}
 ```
 
-### Run sudo command without entering a password
+#### Run sudo command without entering a password
 
 Edit:
 
@@ -34,45 +44,36 @@ Paste to the end of file:
 {{username}} ALL=(ALL) NOPASSWD: ALL
 ```
 
-## Processes
+### Processes
 
-### Find process using a specific port
-
-- Find process using a specific port (netstat).
+#### Find process using a specific port (netstat)
 
 ```bash
 netstat -lp | grep {{port}}
 ```
 
-- Find process using a specific port (lsof).
+#### Find process using a specific port (lsof)
 
 ```bash
 sudo lsof -i TCP:{{port}}
 ```
 
-## Files and directories
+### Files and directories
 
-### View the file or firectory size
+#### View the file or firectory size
 
 ```bash
 du -sh {{path}}
 ```
 
-### Find the largest files
-
-- Find the largest files on a file system.
+#### Find the largest files
 
 ```bash
 du -a / | sort -n -r | head -n 10
 ```
 
-### Remove files by pattern
-
-- Find and remove files in current directory by extension.
+#### Remove files by pattern
 
 ```bash
 find . -maxdepth 1 -name "*.{{extension}}" -delete
 ```
-
-
-
