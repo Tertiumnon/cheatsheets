@@ -174,16 +174,22 @@ git push origin: {{old branch name}} {{new branch name}}
 git push origin -u {{new branch name}}
 ```
 
-### Rename tag
+### Tags
 
-- Rename tag locally.
+#### Add tag to commit
+
+```bash
+git tag -a {{tag name}} {{commit}}
+```
+
+#### Rename tag locally
 
 ```bash
 git tag {{new tag name}} {{previous tag name}}
 git tag -d {{previous tag name}}
 ```
 
-- Rename tag remotely.
+#### Rename tag remotely
 
 ```bash
 git push origin :refs/tags/{{previous tag name}}
