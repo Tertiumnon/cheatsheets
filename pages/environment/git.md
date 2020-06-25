@@ -41,13 +41,13 @@ git remote rm origin
 ### Add remote origin via SSH
 
 ```bash
-git remote add origin git@{{host}}:{{path}}.git
+git remote add origin ssh://git@{{host}}:{{path}}.git
 ```
 
 ### Switching remote URLs from HTTPS to SSH
 
 ```bash
-git remote set-url origin git@{{host}}:{{path}}.git
+git remote set-url origin ssh://git@{{host}}:{{path}}.git
 ```
 
 ### Get existing branches
