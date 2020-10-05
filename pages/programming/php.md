@@ -42,9 +42,36 @@ sudo apt-get install php7.2-pgsql
 sudo apt install php7.2-interbase
 ```
 
-## Composer
+## Usage
 
-https://getcomposer.org/download
+### Basic commands
+
+#### Get PHP version
+
+```bash
+php --version
+```
+
+#### Get PHP info
+
+```bash
+php -i
+```
+
+#### Get php.ini location
+
+```bash
+php -i | grep php.ini
+```
+
+#### Run interactive shell
+
+```bash
+php -a
+```
+
+### 
+
 
 ## Debug
 
@@ -57,6 +84,14 @@ https://getcomposer.org/download
 php -dxdebug.remote_enable=1 -dxdebug.remote_mode=req -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1 -dxdebug.remote_autostart=1 /path/to/script
 ```
 
+## Package managers
+
+### Composer
+
+#### Install
+
+`https://getcomposer.org/download`
+
 ## Troubleshooting
 
 ### Fatal error: Maximum execution time of 30 seconds exceeded
@@ -66,3 +101,4 @@ Try to encrease parameter "max_execution_time" in php.ini:
 ```text
 max_execution_time = 30
 ```
+
