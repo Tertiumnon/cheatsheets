@@ -12,7 +12,7 @@ using System.Linq;
 
 #### Example 1. Summing numbers
 
-```charp
+```c#
 var nums = new[]{1,2,3,4};
 var sum = nums.Aggregate( (a,b) => a + b);
 Console.WriteLine(sum); // output: 10 (1+2+3+4)
