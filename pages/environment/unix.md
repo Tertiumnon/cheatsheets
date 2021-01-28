@@ -77,3 +77,9 @@ du -a / | sort -n -r | head -n 10
 ```bash
 find . -maxdepth 1 -name "*.{{extension}}" -delete
 ```
+
+#### Copy file with current datetime
+
+```bash
+cp /{{path}}/{{file}}.{{file extension}} {{file}}-`date +%Y%m%d-%H%M%S`.{{file extension}}
+```
