@@ -1,4 +1,4 @@
-# AngularJS
+# Angular (AngularJS)
 
 ## SSR: Angular Universal
 

@@ -1,4 +1,4 @@
-# NextJS
+# Next (NextJS)
 
 ## Configure
 
