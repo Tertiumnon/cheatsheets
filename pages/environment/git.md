@@ -18,6 +18,12 @@ git config --global user.name "{{name}}"
 
 ### Configure line endings
 
+#### Setup line endings for Windows if you work with Unix files
+
+```bash
+git config --global core.autocrlf false
+```
+
 #### Setup all line endings to LF
 
 ```bash
