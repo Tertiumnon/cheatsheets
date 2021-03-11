@@ -44,6 +44,14 @@ Paste to the end of file:
 {{username}} ALL=(ALL) NOPASSWD: ALL
 ```
 
+### Run as another user
+
+#### Run as another user (Ubuntu)
+
+```
+sudo -i -u {{username}}
+```
+
 ### Processes
 
 #### Find process using a specific port (netstat)
