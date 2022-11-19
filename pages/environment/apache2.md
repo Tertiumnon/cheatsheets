@@ -1,20 +1,20 @@
 # Apache2
 
-## Install
+## Installation
 
 ### Install (Ubuntu)
 
 ```bash
-sudo apt-get install apache2
+sudo apt install apache2
 ```
 
 ### Install PHP mod (Ubuntu)
 
 ```bash
-sudo apt-get install libapache2-mod-php7.2
+sudo apt install libapache2-mod-php7.2
 ```
 
-## Use
+## Usage
 
 ### Enable a site
 

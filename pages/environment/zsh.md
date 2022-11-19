@@ -1,6 +1,6 @@
 # ZSH
 
-## Install
+## Installation
 
 ### Install ZSH (for current user)
 

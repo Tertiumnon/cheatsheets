@@ -1,6 +1,6 @@
 # Firebird
 
-## Install
+## Installation
 
 ### Install on Ubuntu
 

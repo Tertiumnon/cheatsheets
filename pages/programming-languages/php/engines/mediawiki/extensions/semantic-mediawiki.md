@@ -1,6 +1,6 @@
 # Semantic MediaWiki
 
-## Use
+## Usage
 
 ### Semantic MediaWiki PHP examples
 

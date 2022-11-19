@@ -1,6 +1,6 @@
 # Windows Powershell
 
-## Use
+## Usage
 
 ### Files and folders
 

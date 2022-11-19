@@ -1,6 +1,6 @@
 # PostgreSQL
 
-## Install
+## Installation
 
 ## Access
 
@@ -75,13 +75,13 @@ createuser --interactive
 
 ### Change user password
 
-- Switch to Account.
+- Switch to Account
 
 ```bash
 sudo -u postgres psql
 ```
 
-- Change user password.
+- Change user password
 
 ```sql
 ALTER USER {{db_user_name}} WITH PASSWORD '{{db_user_password}}';
@@ -89,6 +89,6 @@ ALTER USER {{db_user_name}} WITH PASSWORD '{{db_user_password}}';
 
 ## References
 
-* [PostgreSQL Documentation](https://www.postgresql.org/docs/12/reference.html)
-* [PostgreSQL Documentation](https://www.postgresql.org/docs/11/reference.html)
-* [PostgreSQL Documentation](https://www.postgresql.org/docs/10/reference.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/12/reference.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/11/reference.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/10/reference.html)

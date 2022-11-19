@@ -1,6 +1,6 @@
 # SSH
 
-## Use
+## Usage
 
 ### Create key storage file (server)
 

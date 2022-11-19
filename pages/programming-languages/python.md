@@ -4,7 +4,7 @@
 
 * [Python 2.7: Unicode HOWTO](https://docs.python.org/2.7/howto/unicode.html)
 
-## Use
+## Usage
 
 ### List: One line expression
 

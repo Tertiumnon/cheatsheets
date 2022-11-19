@@ -24,7 +24,7 @@ git config --global user.name "{{name}}"
 git config --global core.autocrlf input
 ```
 
-## Use
+## Usage
 
 ### Get remote URL's
 

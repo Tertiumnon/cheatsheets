@@ -1,6 +1,6 @@
 # Express Validator
 
-## Use
+## Usage
 
 ### Methods
 

@@ -1,6 +1,6 @@
 # UNIX
 
-### Upgrade
+### Upgrading
 
 #### Upgrade to the next version (Ubuntu) 
 
@@ -8,7 +8,7 @@
 sudo do-release-upgrade -d
 ```
 
-## Use
+## Usage
 
 ### Users
 

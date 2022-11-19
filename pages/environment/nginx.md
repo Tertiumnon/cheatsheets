@@ -1,15 +1,15 @@
 # Nginx
 
-## Install
+## Installation
 
 ### Install (Ubuntu)
 
 ```bash
 #!/bin/bash
-sudo apt-get install nginx
+sudo apt install nginx
 ```
 
-## Use
+## Usage
 
 ### Enable PHP-FPM
 

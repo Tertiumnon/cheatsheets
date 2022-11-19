@@ -1,27 +1,49 @@
 # MySQL
 
-## Install
+## Installation
 
-### Install MySQL 5 (Ubuntu)
+### Install MySQL (Ubuntu)
 
 ```bash
-sudo apt-get install mysql-server
+sudo apt update
+sudo apt install mysql-server
+sudo mysql_secure_installation
 ```
 
 ## Configure
 
-### MySQL service on bootup (Linux)
+### Setup as a service on startup (Linux)
 
-- Enable starting MySQL service on bootup (Linux)
+- Enable starting MySQL service on startup (Linux)
 
 ```bash
 sudo update-rc.d mysql defaults
 ```
 
-- Disable starting MySQL service on bootup (Linux)
+- Disable starting MySQL service on startup (Linux)
 
 ```bash
 sudo update-rc.d mysql remove
+```
+
+### Setup as service on startup (Windows)
+
+- Install
+
+```powershell
+mysqld --install
+```
+
+- Initialize
+
+```powershell
+mysqld --initialize
+```
+
+- Run
+
+```powershell
+mysqld --console
 ```
 
 ### Change data path
@@ -50,26 +72,12 @@ sudo cp -Rp /var/log/mysql /mnt/d/var/log/mysql
 sudo service mysql start
 ```
 
-## Use
+## Usage
 
-### Setup as a service (Windows)
+### Login
 
-- Install
-
-```powershell
-mysqld --install
-```
-
-- Initialize
-
-```powershell
-mysqld --initialize
-```
-
-- Run
-
-```powershell
-mysqld --console
+```bash
+mysql -u root -p
 ```
 
 ### Common data types
@@ -107,7 +115,7 @@ mysqld --console
 CREATE DATABASE database_name CHARACTER SET UTF8mb4 COLLATE utf8mb4_bin;
 ```
 
-### Extract 
+### Extract
 
 ```sql
 sed -n '/^-- Current Database: `db_name`/,/^-- Current Database: `/p' alldatabases.sql > db_name.sql
@@ -203,7 +211,7 @@ PRIMARY KEY(`person_id`, `fruit_name`)
 );
 ```
 
-Retriving:
+- Retrieving
 
 ```sql
 SELECT p.*, f.*
@@ -235,7 +243,7 @@ SELECT col_name FROM table_name WHERE col_name REGEXP '^(A|B|C)';
 UPDATE table_name SET col_name = SUBSTRING(col_name FROM 1 FOR CHAR_LENGTH(ref_id) - 1);
 ```
 
-## Upgrade
+## Upgrading
 
 ### MySQL upgrade from 5.7 to 8.0 (Ubuntu)
 
@@ -270,16 +278,16 @@ ALTER USER '{{user_name}}'@'localhost' IDENTIFIED WITH mysql_native_password BY 
 FLUSH PRIVILEGES;
 ```
 
-* [stackoverflow.com/questions/50093144](https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server)
-* [](https://dev.mysql.com/doc/dev/connector-nodejs/8.0/)
+- [stackoverflow.com/questions/50093144](https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server)
+- [](https://dev.mysql.com/doc/dev/connector-nodejs/8.0/)
 
 ## Uninstall
 
 ### Uninstall (Ubuntu)
 
 ```bash
-sudo apt-get remove --purge mysql-\*
-sudo apt-get install mysql-server mysql-client
+sudo apt remove --purge mysql-\*
+sudo apt install mysql-server mysql-client
 ```
 
 ### Uninstall (CenOS)
