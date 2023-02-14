@@ -18,16 +18,28 @@ sudo do-release-upgrade -d
 less /etc/passwd
 ```
 
-#### Add new user
+#### Create new user
 
 ```bash
 useradd -m -d /home/{{user_name}} {{user_name}}
 ```
 
-#### Remove user
+#### Add user to sudoers group
+
+```bash
+usermod -aG sudo {{user}}
+```
+
+#### Delete user
 
 ```bash
 userdel {{user_name}}
+```
+
+#### Login as user (for root)
+
+```bash
+su - {{user}}
 ```
 
 #### Run sudo command without entering a password
