@@ -74,7 +74,13 @@ sudo service mysql start
 
 ## Usage
 
-### Login
+### Login as root
+
+```bash
+sudo mysql
+```
+
+### Login with user and password
 
 ```bash
 mysql -u root -p
