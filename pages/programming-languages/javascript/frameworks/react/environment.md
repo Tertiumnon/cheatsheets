@@ -1,8 +1,8 @@
-# React (ReactJS)
+# React Environment
 
-## Enviroment
+## Usage
 
-### Start dev enviroment without opening url in browser
+### Start dev environment without opening url in browser
 
 - Add "BROWSER=none" to start-script.
 
@@ -15,9 +15,9 @@
 },
 ```
 
-### Use enviroment variables
+### Use environment variables
 
-- Create file "./env" in the root. 
+- Create file "./env" in the root.
 
 ```text
 .env
@@ -30,7 +30,7 @@ package.json
 REACT_APP_PASSWORD=123
 ```
 
-- Start your development enviroment.
+- Start your development environment.
 
 ```text
 npm start
