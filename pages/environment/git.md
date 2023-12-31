@@ -52,7 +52,7 @@ git remote set-url origin ssh://git@{{host}}:{{path}}.git
 
 ### Get existing branches
 
-#### Existing branches are listed; the current branch will be highlighted in green and marked with an asterisk.
+#### Existing branches are listed; the current branch will be highlighted in green and marked with an asterisk
 
 ```bash
 git branch --list
@@ -215,11 +215,21 @@ error: failed to push some refs to 'https://github.com/{{repository name}}.git'
 
 - Recipe: Fix your local Git cache.
 
-```
+```bash
 git fetch -p origin
 ```
 
 ## References
 
-* [Git. Documentation. References](https://git-scm.com/docs)
+- [Git. Documentation. References](https://git-scm.com/docs)
 
+### Changelog
+
+- [Changelog convention](https://keepachangelog.com/en/1.0.0/)
+- [Changelog](https://www.npmjs.com/package/changelog)
+- [Commitizen](https://www.npmjs.com/package/commitizen)
+
+### Workflows
+
+- [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+- [Comparing Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
