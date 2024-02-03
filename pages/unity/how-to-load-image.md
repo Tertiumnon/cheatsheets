@@ -1,4 +1,4 @@
-# Unity Loading Image
+# Unity: How to load image
 
 ## References
 
