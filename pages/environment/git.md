@@ -24,6 +24,14 @@ git config --global user.name "{{name}}"
 git config --global core.autocrlf input
 ```
 
+### Configure file/folder permissions
+
+#### Don't change file/folder permissions
+
+```bash
+git config core.fileMode false
+```
+
 ## Usage
 
 ### Get remote URL's
