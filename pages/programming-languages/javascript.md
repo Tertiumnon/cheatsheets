@@ -1,15 +1,17 @@
 # JavaScript
 
-## Basics
+## Q&A
 
-Types, Primitives
+### Types, Primitives
 
-LexicalEnvironment
+### LexicalEnvironment
 
-Decorators, Call, Apply
+### Decorators, Call, Apply
 
-Generators, Iterators
+### Generators, Iterators
 
-Carrying
+### Carrying
 
-Event Loop, Stack, Heap
+### Event Loop, Stack, Heap
+
+### First-Class Function
