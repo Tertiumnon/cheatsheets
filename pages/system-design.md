@@ -17,3 +17,7 @@ Reverse Proxy -
 Shard -
 
 ## Frontend
+
+## Links
+
+- [](https://www.youtube.com/@ByteByteGo)
