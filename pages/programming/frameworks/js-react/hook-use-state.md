@@ -1,6 +1,4 @@
-# React Hooks
-
-## useState
+# useState
 
 ```js
 import React, { useState } from "react";
