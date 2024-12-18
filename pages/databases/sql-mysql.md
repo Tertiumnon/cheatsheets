@@ -115,12 +115,6 @@ mysql -u root -p
 | json data        | JSON          | or LONGTEXT
 ```
 
-### Create database
-
-```sql
-CREATE DATABASE database_name CHARACTER SET UTF8mb4 COLLATE utf8mb4_bin;
-```
-
 ### Extract
 
 ```sql
@@ -147,16 +141,6 @@ gunzip < {{db_import_name}}.sql.gz | mysql -u {{db_user}} -p {{db_name}}.sql
 
 ```sql
 mysqldump -u {{db_user}} -p {{db_name}} > {{db_export_name}}.sql
-```
-
-### Create user
-
-- Create a database user.
-
-```sql
-CREATE USER '{{user_name}}'@'localhost' IDENTIFIED BY '{{user_password}}';
-GRANT ALL PRIVILEGES ON {{database_name}}.* TO '{{user_name}}'@'localhost';
-FLUSH PRIVILEGES;
 ```
 
 - Set previous authentication method for MySQL 8.
