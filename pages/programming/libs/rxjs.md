@@ -1,8 +1,10 @@
 # RxJS
 
-## Concepts
+## Higher-Order RxJs Mapping Operators
 
-### High Order Operators
+- [mergeMap](./rxjs/mergeMap.md)
+- switchMap
+- concatMap
 
 ## References
 
