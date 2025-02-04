@@ -1,1 +1,5 @@
 # Lifecycle
+
+## constructor
+
+## ngOnInit
