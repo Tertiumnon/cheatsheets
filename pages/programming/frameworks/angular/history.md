@@ -1,5 +1,15 @@
 # Angular History
 
+## Angular 17
+
+- [Signals](./signals.md)
+- New conditional template directives (@if, @for, @switch)
+- [@defer](./defer.md) components
+- @Input transform
+- [Hydration](./hydration.md)
+- Standalone components by default
+- ESBuild and Vite enabled by default
+
 ## Angular 9
 
 ### JIT to AOT

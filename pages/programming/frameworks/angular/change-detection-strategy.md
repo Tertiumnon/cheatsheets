@@ -38,3 +38,7 @@ export class OnPushDevComponent {
   }
 }
 ```
+
+### ChangeDetectionRef
+
+So you could try ref.detectChanges() to run change detection on the component and his children or ref.markForCheck() which does not trigger change detection and instead it will mark all onPush ancestors as to be checked once.
