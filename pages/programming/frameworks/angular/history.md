@@ -1,5 +1,15 @@
 # Angular History
 
+## Angular 19
+
+- DEV: incremental hydration (@defer for template parts)
+- zoneless SSR
+- hot module replacement (HMR) for styles out of the box and 
+- experimental support for template HMR behind a flag!
+- standalone defaults to true
+- linkedSignal()
+- resource()
+
 ## Angular 17
 
 - [Signals](./signals.md)
