@@ -1,0 +1,22 @@
+{
+  "name": "cheatsheets",
+  "version": "1.0.0",
+  "description": "Cheatsheets for programmers.",
+  "scripts": {
+    "release:patch": "git checkout main && npm version patch && git push && git push --tags && git checkout develop && git rebase main && git push && git checkout main",
+    "release:minor": "git checkout develop && npm version minor && git push && git push --tags && git checkout main && git merge develop && git push && git checkout develop",
+    "release:major": "git checkout develop && npm version major && git push && git push --tags && git checkout main && git merge develop && git push && git checkout develop"
+  },
+  "homepage": "https://github.com/Tertiumnon/cheatsheets#readme",
+  "bugs": {
+    "url": "https://github.com/Tertiumnon/cheatsheets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tertiumnon/cheatsheets.git"
+  },
+  "license": "ISC",
+  "author": "Vitalii Balabanov",
+  "type": "commonjs",
+  "main": "index.js"
+}
