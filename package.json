@@ -1,6 +1,6 @@
 {
   "name": "cheatsheets",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Cheatsheets for programmers.",
   "scripts": {
     "release:patch": "git checkout main && npm version patch && git push && git push --tags && git checkout develop && git rebase main && git push && git checkout main",
