@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "description": "Cheatsheets for programmers.",
   "scripts": {
-    "release:patch": "git checkout main && npm version patch && git push && git push --tags && git checkout develop && git rebase main && git push && git checkout main",
-    "release:minor": "git checkout develop && npm version minor && git push && git push --tags && git checkout main && git merge develop && git push && git checkout develop",
-    "release:major": "git checkout develop && npm version major && git push && git push --tags && git checkout main && git merge develop && git push && git checkout develop"
+    "release:patch": "node ./node_modules/@tertium/js/scripts/release.js patch",
+    "release:minor": "node ./node_modules/@tertium/js/scripts/release.js minor",
+    "release:major": "node ./node_modules/@tertium/js/scripts/release.js major"
   },
   "homepage": "https://github.com/Tertiumnon/cheatsheets#readme",
   "bugs": {
@@ -18,5 +18,8 @@
   "license": "ISC",
   "author": "Vitalii Balabanov",
   "type": "commonjs",
-  "main": "index.js"
+  "main": "index.js",
+  "devDependencies": {
+    "@tertium/js": "^0.15.0"
+  }
 }
