@@ -9,9 +9,14 @@
     "Liskov",
     "mysqld",
     "mysqldump",
+    "NOPASSWD",
+    "Passwordless",
     "psql",
+    "publickey",
     "sshconfig",
     "stackoverflow",
-    "SUBSTR"
+    "SUBSTR",
+    "userdel",
+    "usermod"
   ]
 }
