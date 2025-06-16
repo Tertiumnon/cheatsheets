@@ -1,6 +1,6 @@
-# UNIX Cheatsheet
+# Common UNIX Commands Cheatsheet
 
-## Basic Server Setup
+## Basic User Setup
 
 ### 1. Create a New User
 
@@ -13,19 +13,25 @@ sudo passwd {user}
 - `-d`: Specify home directory path.
 - `-s`: Set default shell.
 
-### 2. Add User to Sudoers
+### 2. Add User to Sudoers Group
+
+The command to add a user to the sudoers group varies by distribution. The general command is:
 
 ```bash
-sudo usermod -aG sudo {user}
+sudo usermod -aG {sudo_group_name} {user}
 ```
 
+Replace `{sudo_group_name}` with the appropriate group for your distribution (e.g., `wheel` for AlmaLinux/Arch Linux, `sudo` for Ubuntu). Refer to the distribution-specific cheatsheet for the exact command.
+
 ### 3. Allow Passwordless Sudo (Optional)
+
+Edit the sudoers file:
 
 ```bash
 sudo visudo
 ```
 
-Add at the end:
+Add the following line at the end of the file:
 
 ```text
 {user} ALL=(ALL) NOPASSWD: ALL
@@ -39,15 +45,6 @@ su - {user}
 
 ---
 
-## System Upgrade (Ubuntu)
-
-```bash
-sudo apt update && sudo apt upgrade
-sudo do-release-upgrade -d
-```
-
----
-
 ## User Management
 
 - **List users:**
@@ -56,21 +53,15 @@ sudo do-release-upgrade -d
   less /etc/passwd
   ```
 
-- **Delete user:**
+- **Delete user (and their home directory):**
 
   ```bash
-  sudo userdel {user}
+  sudo userdel -r {user}
   ```
 
 ---
 
-## Processes
-
-- **Find process using a port (netstat):**
-
-  ```bash
-  netstat -lp | grep {port}
-  ```
+## Process Management
 
 - **Find process using a port (lsof):**
 
@@ -78,29 +69,37 @@ sudo do-release-upgrade -d
   sudo lsof -i TCP:{port}
   ```
 
+- **Find process using a port (netstat):**
+
+  ```bash
+  # netstat might need to be installed (e.g., package 'net-tools')
+  netstat -tulnp | grep ':{port}'
+  ```
+
 ---
 
-## Files and Directories
+## File and Directory Management
 
-- **View size:**
-
-  ```bash
-  du -sh {path}
-  ```
-
-- **Find largest files:**
+- **View size of a directory:**
 
   ```bash
-  du -a / | sort -n -r | head -n 10
+  du -sh {path_to_directory}
   ```
 
-- **Remove files by pattern:**
+- **Find largest files/directories in current path (top 10):**
 
   ```bash
-  find . -maxdepth 1 -name "*.{extension}" -delete
+  du -a . | sort -n -r | head -n 10
   ```
 
-- **Copy file with current datetime:**
+- **Remove files by pattern (use with caution):**
+
+  ```bash
+  # Example: remove all .log files in the current directory only (not subdirectories)
+  find . -maxdepth 1 -type f -name "*.{extension}" -delete
+  ```
+
+- **Copy file with current datetime in its name:**
 
   ```bash
   cp {file} {file}-$(date +%Y%m%d-%H%M%S)
