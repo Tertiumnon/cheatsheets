@@ -31,5 +31,5 @@ server {
 ### Start NextJS with PM2
 
 ```bash
-pm2 start npm --name "{{your-name}}" -- start
+pm2 start npm --name "{your-name}" -- start
 ```

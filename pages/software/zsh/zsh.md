@@ -19,7 +19,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 - Set ZSH as default shell (CentOS).
 
 ```bash
-sudo chsh -s /bin/zsh {{username}}
+sudo chsh -s /bin/zsh {username}
 ```
 
 ## ZSH plugins

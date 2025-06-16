@@ -4,7 +4,7 @@
 
 _Base64Url_ encoded strings with "." delimiter.
 
-{{header}}.{{payload}}.{{signature}}
+{header}.{payload}.{signature}
 
 ### Header
 

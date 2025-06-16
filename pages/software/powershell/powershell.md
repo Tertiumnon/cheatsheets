@@ -7,13 +7,13 @@
 #### Remove folder with recurse
 
 ```powershell
-Remove-Item -path {{path\to\folder}}
+Remove-Item -path {path\to\folder}
 ```
 
 #### Make a symbolic link (CMD)
 
 ```cmd
-mklink /d \{{Symlink name}} C:\{{Path to dir}}
+mklink /d \{Symlink name} C:\{Path to dir}
 ```
 
 ### Processes and services
@@ -21,11 +21,11 @@ mklink /d \{{Symlink name}} C:\{{Path to dir}}
 #### Find process ID by port
 
 ```powershell
-netstat -ano | findstr {{port}}
+netstat -ano | findstr {port}
 ```
 
 #### Kill process by ID
 
 ```powershell
-taskkill /F /PID {{ID}}
+taskkill /F /PID {ID}
 ```

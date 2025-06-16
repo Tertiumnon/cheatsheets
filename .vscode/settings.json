@@ -10,6 +10,7 @@
     "mysqld",
     "mysqldump",
     "psql",
+    "sshconfig",
     "stackoverflow",
     "SUBSTR"
   ]

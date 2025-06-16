@@ -1,72 +1,122 @@
-# SSH
+# SSH Cheatsheet
 
-## Usage
+## 1. Generate SSH Key Pair
 
-### Create key storage file (server)
-
-- Create ssh folder (if not exists)
-
-```bash
-mkdir ~/.ssh
+```sh
+ssh-keygen -t ed25519 -C "{email}"
 ```
 
-- Create key storage file.
+- `-t ed25519`: Use Ed25519 algorithm (recommended).
+- `-C`: Comment (usually your email).
 
-```bash
-touch ~/.ssh/authorized_keys
+**Default location:**  
+
+- Private key: `~/.ssh/id_ed25519`  
+- Public key: `~/.ssh/id_ed25519.pub`
+
+---
+
+## 2. Copy Public Key to Server
+
+```sh
+ssh-copy-id {user}@{host}
 ```
 
-- Setup permissions.
+Or manually:
 
-```bash
-chmod 644 ~/.ssh/authorized_keys
+```sh
+cat ~/.ssh/id_ed25519.pub | ssh {user}@{host} "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
 
-### Create SSH pair (server)
+---
 
-- Generate SSH private and public keys.
+## 3. Connect to Server
 
-```bash
-ssh-keygen -t rsa -b 4096 -N '' -C "{{your email}}" -f ~/.ssh/id_rsa
+```sh
+ssh {user}@{host}
 ```
 
-- Copy created pub key to key storage.
+- `{user}`: Your username on the remote server.
+- `{host}`: IP address or hostname.
 
-```bash
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+---
+
+## 4. File Permissions
+
+**Private key:**  
+
+```sh
+chmod 600 ~/.ssh/id_ed25519
 ```
 
-### Create SSH pair (client)
+**Public key:**  
 
-- Copy private key to local .ssh directory.
-
-```bash
-scp {{username}}@{{servername}}:/home/{{username}}/.ssh/{{keyname}} ~/.ssh/{{keyname}}
+```sh
+chmod 644 ~/.ssh/id_ed25519.pub
 ```
 
-- Add your private key to SSH config.
+**Authorized keys on server:**  
 
-```text
-Host {{servername alias}}
-    HostName {{servername}}
-    User {{username}}
-    IdentityFile ~/.ssh/{{keyname}}
-```
-
-### Use SSH agent
-
-```bash
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-```
-
-### Setup SSH directories and files permissions
-
-```bash
+```sh
+chmod 600 ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
-chmod 644 ~/.ssh/authorized_keys
-chmod 644 ~/.ssh/known_hosts
-chmod 644 ~/.ssh/config
-chmod 600 ~/.ssh/id_rsa
-chmod 644 ~/.ssh/id_rsa.pub
 ```
+
+---
+
+## 5. Example `.ssh/config`
+
+Create or edit `~/.ssh/config` for easier SSH usage:
+
+```sshconfig
+Host {alias}
+    HostName {host}
+    User {user}
+    IdentityFile ~/.ssh/id_ed25519
+    Port 22
+    ForwardAgent yes
+```
+
+**Usage:**
+
+```sh
+ssh {alias}
+```
+
+---
+
+## 6. Useful SSH Options
+
+- Specify identity file:
+
+  ```sh
+  ssh -i ~/.ssh/id_ed25519 {user}@{host}
+  ```
+
+- Run a command remotely:
+
+  ```sh
+  ssh {user}@{host} "ls -la"
+  ```
+
+- Forward a local port:
+
+  ```sh
+  ssh -L 8080:localhost:80 {user}@{host}
+  ```
+
+---
+
+## 7. Troubleshooting
+
+- Increase verbosity:
+
+  ```sh
+  ssh -v {user}@{host}
+  ```
+
+- Check permissions if you get "Permission denied (publickey)".
+
+---
+
+**Tip:** Never share your

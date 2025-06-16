@@ -29,7 +29,7 @@ isql-fb
 - Create connection
 
 ```bash
-SQL> connect "localhost:/var/lib/firebird/2.5/data/employee.fdb" user 'SYSDBA' password '{{masterkey}}';
+SQL> connect "localhost:/var/lib/firebird/2.5/data/employee.fdb" user 'SYSDBA' password '{masterkey}';
 ```
 
 - Show tables
@@ -51,11 +51,11 @@ SQL> quit;
 - Backup previous DB.
 
 ```bash
-gbak -user sysdba -pas {{masterkey}} -b {{path}}/{{db_name}}.fdb {{db_name}}.fbk
+gbak -user sysdba -pas {masterkey} -b {path}/{db_name}.fdb {db_name}.fbk
 ```
 
 - Restore DB from backup to a new location, for example to "/var/lib/firebird/3.0/data".
 
 ```bash
-gbak -user sysdba -pas {{masterkey}} -c {{db_name}}.fbk {{path}}/{{db_name}}.fdb
+gbak -user sysdba -pas {masterkey} -c {db_name}.fbk {path}/{db_name}.fdb
 ```

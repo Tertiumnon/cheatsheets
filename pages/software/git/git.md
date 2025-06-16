@@ -7,13 +7,13 @@
 #### Setup user email
 
 ```bash
-git config --global user.email "{{email}}"
+git config --global user.email "{email}"
 ```
 
 #### Setup user name
 
 ```bash
-git config --global user.name "{{name}}"
+git config --global user.name "{name}"
 ```
 
 ### Configure line endings
@@ -49,13 +49,13 @@ git remote rm origin
 ### Add remote origin via SSH
 
 ```bash
-git remote add origin ssh://git@{{host}}:{{path}}.git
+git remote add origin ssh://git@{host}:{path}.git
 ```
 
 ### Switching remote URLs from HTTPS to SSH
 
 ```bash
-git remote set-url origin ssh://git@{{host}}:{{path}}.git
+git remote set-url origin ssh://git@{host}:{path}.git
 ```
 
 ### Get existing branches
@@ -79,13 +79,13 @@ git diff --name-only HEAD HEAD~1
 #### Remove file from git repository
 
 ```bash
-git rm --cached {{file to remove}}
+git rm --cached {file to remove}
 ```
 
 #### Remove folder from git repository
 
 ```bash
-git rm --cached -r {{folder to remove}}
+git rm --cached -r {folder to remove}
 ```
 
 #### Remove commit history in git repository
@@ -105,13 +105,13 @@ git push
 #### Test your pattern
 
 ```bash
-git branch | grep "{{pattern}}"
+git branch | grep "{pattern}"
 ```
 
 #### Remove multiple branches using pattern
 
 ```bash
-git branch | grep "{{pattern}}" | xargs git branch -D
+git branch | grep "{pattern}" | xargs git branch -D
 ```
 
 ### Clear all stash
@@ -151,7 +151,7 @@ git push -u --force origin master
 ### Pull another branch without switching
 
 ```bash
-git fetch origin {{branch_name}}:{{branch_name}}
+git fetch origin {branch_name}:{branch_name}
 ```
 
 ### Rename branch
@@ -159,25 +159,25 @@ git fetch origin {{branch_name}}:{{branch_name}}
 #### Rename active branch
 
 ```bash
-git branch -m {{new branch name}}
+git branch -m {new branch name}
 ```
 
 #### Rename another branch
 
 ```bash
-git branch -m {{old branch name}} {{new branch name}}
+git branch -m {old branch name} {new branch name}
 ```
 
 #### Delete old branch and push branch with new name
 
 ```bash
-git push origin: {{old branch name}} {{new branch name}}
+git push origin: {old branch name} {new branch name}
 ```
 
 #### Reset the upstream
 
 ```bash
-git push origin -u {{new branch name}}
+git push origin -u {new branch name}
 ```
 
 ### Tags
@@ -185,20 +185,20 @@ git push origin -u {{new branch name}}
 #### Add tag to commit
 
 ```bash
-git tag {{tag name}} {{commit}}
+git tag {tag name} {commit}
 ```
 
 #### Rename tag locally
 
 ```bash
-git tag {{new tag name}} {{previous tag name}}
-git tag -d {{previous tag name}}
+git tag {new tag name} {previous tag name}
+git tag -d {previous tag name}
 ```
 
 #### Rename tag remotely
 
 ```bash
-git push origin :refs/tags/{{previous tag name}}
+git push origin :refs/tags/{previous tag name}
 git push origin --tags
 ```
 
@@ -217,8 +217,8 @@ git config --global core.quotePath false
 - Error
 
 ```bash
-error: unable to delete '{{branch name}}': remote ref does not exist
-error: failed to push some refs to 'https://github.com/{{repository name}}.git'
+error: unable to delete '{branch name}': remote ref does not exist
+error: failed to push some refs to 'https://github.com/{repository name}.git'
 ```
 
 - Recipe: Fix your local Git cache.

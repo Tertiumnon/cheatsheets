@@ -55,13 +55,13 @@ sudo -u postgres psql
 
 ```bash
 sudo -i -u postgres
-createdb {{database_name}}
+createdb {database_name}
 ```
 
 - Create database (psql).
 
 ```sql
-CREATE DATABASE {{database}};
+CREATE DATABASE {database};
 ```
 
 ### Create user
@@ -84,13 +84,13 @@ sudo -u postgres psql
 - Change user password
 
 ```sql
-ALTER USER {{user}} WITH PASSWORD '{{password}}';
+ALTER USER {user} WITH PASSWORD '{password}';
 ```
 
 ### Grant privileges to database
 
 ```sql
-grant all privileges on database {{database}} to {{user}};
+grant all privileges on database {database} to {user};
 ```
 
 ## References

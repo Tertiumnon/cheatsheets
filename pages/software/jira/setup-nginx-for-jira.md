@@ -6,10 +6,10 @@
 
 | Type  | Name            | Content         |
 | ----- | --------------- | --------------- |
-| CNAME | www             | {{server name}} |
-| A     | {{server name}} | {{server IP}}   |
-| A     | \*              | {{server IP}}   |
-| A     | {{subdomain}}   | {{server IP}}   |
+| CNAME | www             | {server name} |
+| A     | {server name} | {server IP}   |
+| A     | \*              | {server IP}   |
+| A     | {subdomain}   | {server IP}   |
 
 ## Setup Jira
 
@@ -21,7 +21,7 @@
 sudo /etc/init.d/jira stop
 ```
 
-- Open `{{Jira-Install}}/conf/server.xml`
+- Open `{Jira-Install}/conf/server.xml`
 
 ```bash
 sudo nano /opt/atlassian/jira/conf/server.xml
@@ -34,7 +34,7 @@ sudo nano /opt/atlassian/jira/conf/server.xml
             maxThreads="150" minSpareThreads="25" connectionTimeout="20000" enableLookups="false"
             maxHttpHeaderSize="8192" protocol="HTTP/1.1" useBodyEncodingForURI="true" redirectPort="8443"
             acceptCount="100" disableUploadTimeout="true" bindOnInit="false" scheme="http"
-            path="" proxyName="{{server}}" proxyPort="80"/>
+            path="" proxyName="{server}" proxyPort="80"/>
 ```
 
 - Start Jira service
@@ -48,14 +48,14 @@ sudo /etc/init.d/jira start -fg
 ### Create Nginx config file
 
 ```bash
-sudo nano /etc/nginx/sites-available/{{server}}.conf
+sudo nano /etc/nginx/sites-available/{server}.conf
 ```
 
 ### Update Nginx config file
 
 ```text
 server {
-    server_name {{server}};
+    server_name {server};
 
     location / {
         proxy_set_header X-Forwarded-Host $host;
@@ -70,11 +70,11 @@ server {
 ### Enable site
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/{{server}}.conf /etc/nginx/sites-enabled/{{server}}.conf
+sudo ln -s /etc/nginx/sites-available/{server}.conf /etc/nginx/sites-enabled/{server}.conf
 sudo service nginx restart
 ```
 
-### 
+###
 
 ## References
 
