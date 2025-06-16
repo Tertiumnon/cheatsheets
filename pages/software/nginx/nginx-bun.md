@@ -2,7 +2,14 @@
 
 ## 1. Installation
 
-### Debian/Ubuntu
+### Ubuntu
+
+```bash
+sudo apt update
+sudo apt install nginx -y
+```
+
+### Debian
 
 ```bash
 sudo apt update
